@@ -23,6 +23,10 @@ export const navigation = [
       {
         text: 'Supplier',
         path: '/supplier'
+      },
+      {
+        text: 'Customer',
+        path: '/customer'
       }
     ]
   },

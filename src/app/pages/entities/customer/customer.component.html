@@ -1,2 +1,48 @@
-<h2 class="content-block">customer</h2>
-<div class="dx-card content-block responsive-paddings">Put your content here</div>
+<h2 class="content-block">Customers</h2>
+
+<dx-data-grid class="dx-card wide-card"
+    [dataSource]="dataSource"
+    [showBorders]="false"
+    [focusedRowEnabled]="true"
+    [focusedRowIndex]="0"
+    [columnAutoWidth]="true"
+    [columnHidingEnabled]="true">
+
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="false"></dxo-filter-row>
+
+    <dxi-column
+        dataField="Customer_ID"
+        [width]="90"
+        [hidingPriority]="2">
+    </dxi-column>
+    <dxi-column
+        dataField="Customer_Name"
+        [width]="190"
+        caption="Subject"
+        [hidingPriority]="8">
+    </dxi-column>
+    <dxi-column
+        dataField="Customer_Address"
+        caption="Status"
+        [hidingPriority]="6">
+    </dxi-column>
+    <dxi-column
+        dataField="Customer_CIty"
+        caption="Priority"
+        [hidingPriority]="5">
+    </dxi-column>
+    <dxi-column
+        dataField="Customer_State"
+        caption="Assigned To"
+        [allowSorting]="false"
+        [hidingPriority]="7">
+    </dxi-column>
+    <dxi-column
+        dataField="Customer_Zipcode"
+        caption="Start Date"
+        [hidingPriority]="3">
+    </dxi-column>
+</dx-data-grid>
+
