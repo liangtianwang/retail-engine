@@ -26,9 +26,9 @@ jobs:
         with:
           node-version: 10.x 
       - name: npm install command
-        run: cd dist && npm install
+        run: npm install
       - name: Run build command
-        run: cd dist && npm run build
+        run: npm run build
       - name: Deploy
         uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.2.1
         with:
