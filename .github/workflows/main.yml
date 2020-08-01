@@ -20,15 +20,8 @@ jobs:
 # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 10.x 
-      - name: npm install command
-        run: npm install
-      - name: Run build command
-        run: npm run build
+        uses: actions/checkout@v1
+ 
       - name: Deploy
         uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.2.1
         with:
